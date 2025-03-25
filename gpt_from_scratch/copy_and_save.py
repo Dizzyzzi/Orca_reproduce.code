@@ -1,12 +1,12 @@
 import torch
 import time
-
 # from gpt import GPT
-from gptadv import GPT
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from utils import copy_model, generate_token
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 from torch.profiler import profile, record_function, ProfilerActivity
+
+from gptadv import GPT
+from utils import copy_model, generate_token
 
 def main(argv=None):
 
