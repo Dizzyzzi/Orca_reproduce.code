@@ -1,3 +1,5 @@
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 import torch
 from torch.onnx import export
 import torch_tensorrt

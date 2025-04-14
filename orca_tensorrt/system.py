@@ -1,3 +1,5 @@
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 from scheduler import *
 from utils import *
 from build import GPT_TRT
@@ -30,7 +32,7 @@ class Server(threading.Thread):
 if __name__ == "__main__":
 
     # load dataset
-    df_NQ = pd.read_csv('/workspace/dataset/NQ_data.csv')
+    df_NQ = pd.read_csv('/workspace/Orca_reproduce.code/dataset/NQ_data.csv')
 
     # get first 1000 rows that have non zero short answer length
     df_NQ = df_NQ.loc[df_NQ['short answer length'] > 0].iloc[:1000]

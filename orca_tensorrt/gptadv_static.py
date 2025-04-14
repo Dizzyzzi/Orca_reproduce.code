@@ -274,6 +274,7 @@ if __name__ == "__main__":
 
     copy_model(model_official, model_ours)
     # with torch_tensorrt.logging.debug():
+    help(torch_tensorrt.compile)
     trt_model = torch_tensorrt.compile(model_ours, inputs = [
         torch_tensorrt.Input( # concated input
             min_shape=(1,),
